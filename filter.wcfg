@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/ajermaky/Development/Homework/ECE111/Project/filtertest_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="filtertest" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="22" />
+   <wvobject fp_name="/filtertest/ready" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ready</obj_property>
+      <obj_property name="ObjectShortName">ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/filtertest/valid" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">valid</obj_property>
+      <obj_property name="ObjectShortName">valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/filtertest/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/filtertest/rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/filtertest/start" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/filtertest/uut/cache" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">cache[0:54,31:0]</obj_property>
+      <obj_property name="ObjectShortName">cache[0:54,31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/filtertest/uut/addr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">addr[4:0]</obj_property>
+      <obj_property name="ObjectShortName">addr[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/filtertest/uut/coef" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">coef[31:0]</obj_property>
+      <obj_property name="ObjectShortName">coef[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/filtertest/uut/coef_temp" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">coef_temp[31:0]</obj_property>
+      <obj_property name="ObjectShortName">coef_temp[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/filtertest/uut/x" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">x[31:0]</obj_property>
+      <obj_property name="ObjectShortName">x[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/filtertest/uut/y" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">y[31:0]</obj_property>
+      <obj_property name="ObjectShortName">y[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/filtertest/uut/sum_a" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">sum_a[31:0]</obj_property>
+      <obj_property name="ObjectShortName">sum_a[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/filtertest/uut/sum_b" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">sum_b[31:0]</obj_property>
+      <obj_property name="ObjectShortName">sum_b[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/filtertest/uut/sum" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">sum[31:0]</obj_property>
+      <obj_property name="ObjectShortName">sum[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/filtertest/uut/mult_a" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">mult_a[31:0]</obj_property>
+      <obj_property name="ObjectShortName">mult_a[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800000</obj_property>
+   </wvobject>
+   <wvobject fp_name="/filtertest/uut/mult_b" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">mult_b[31:0]</obj_property>
+      <obj_property name="ObjectShortName">mult_b[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800000</obj_property>
+   </wvobject>
+   <wvobject fp_name="/filtertest/uut/prod" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">prod[31:0]</obj_property>
+      <obj_property name="ObjectShortName">prod[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800000</obj_property>
+   </wvobject>
+   <wvobject fp_name="/filtertest/uut/total_sum_a" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">total_sum_a[31:0]</obj_property>
+      <obj_property name="ObjectShortName">total_sum_a[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#008000</obj_property>
+   </wvobject>
+   <wvobject fp_name="/filtertest/uut/total_sum_b" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">total_sum_b[31:0]</obj_property>
+      <obj_property name="ObjectShortName">total_sum_b[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#008000</obj_property>
+   </wvobject>
+   <wvobject fp_name="/filtertest/uut/total_sum" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">total_sum[31:0]</obj_property>
+      <obj_property name="ObjectShortName">total_sum[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#008000</obj_property>
+   </wvobject>
+   <wvobject fp_name="/filtertest/uut/state" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">state[4:0]</obj_property>
+      <obj_property name="ObjectShortName">state[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/filtertest/uut/counter" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">counter[4:0]</obj_property>
+      <obj_property name="ObjectShortName">counter[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>

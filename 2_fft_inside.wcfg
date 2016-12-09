@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/ajermaky/Development/Homework/ECE111/Project/fft_test_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="fft_test" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="20" />
+   <wvobject fp_name="/fft_test/uut/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fft_test/uut/rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fft_test/uut/r1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">r1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">r1[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fft_test/uut/i1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">i1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i1[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fft_test/uut/r2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">r2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">r2[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fft_test/uut/i2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">i2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i2[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fft_test/uut/sum1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">sum1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">sum1[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fft_test/uut/sum2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">sum2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">sum2[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fft_test/uut/start" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fft_test/uut/newr1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">newr1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">newr1[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fft_test/uut/newi1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">newi1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">newi1[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fft_test/uut/newr2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">newr2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">newr2[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fft_test/uut/newi2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">newi2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">newi2[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fft_test/uut/a1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">a1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">a1[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fft_test/uut/b1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">b1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">b1[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fft_test/uut/a2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">a2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">a2[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fft_test/uut/b2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">b2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">b2[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fft_test/uut/valid" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">valid</obj_property>
+      <obj_property name="ObjectShortName">valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fft_test/uut/ready" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ready</obj_property>
+      <obj_property name="ObjectShortName">ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fft_test/uut/state" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">state[2:0]</obj_property>
+   </wvobject>
+</wave_config>
