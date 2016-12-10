@@ -78,22 +78,18 @@ end
 % win_x = win_mdl.*filt_x';
 
 window_length = 256;
-window_ratio = .2;
+window_ratio = .25;
 
 NFFT = 2^nextpow2(window_length);
 
-Y = fft(filt_x(1:window_length),NFFT)/window_length;
-f = Fs/2*linspace(0,1,NFFT/2+1);
-figure
-plot(f,2*abs(Y(1:NFFT/2+1)),'LineWidth',2);
-start = window_length*window_ratio;
 
-for i=1:4
+for i=1:5
     pause(2);
-    start = (i)*start;
-    Y = fft(filt_x(start:start+window_length-1),NFFT)/window_length;
+    start = (i-1)*update+1;
+    Y = fft(filt_x(start:start+window_length-1),NFFT);
+    absY = max(abs(real(Y)),abs(imag(Y))) + min(abs(real(Y)),abs(imag(Y)))/4;
     f = Fs/2*linspace(0,1,NFFT/2+1);
-    plot(f,2*abs(Y(1:NFFT/2+1)),'LineWidth',2);
+    plot(f,absY(1:NFFT/2+1),'LineWidth',2);
 end
 
 

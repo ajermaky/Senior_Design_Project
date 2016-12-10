@@ -124,8 +124,34 @@ module FinalProject(
 
 	filter_n fil(clk,rst,addr_in,amount,x,filt_start,filt_ready,filt_valid,dfilt_in,inc,fa1,fb1,fm1,fn1,fa2,fb2,fs1,fp1,fs2);
 	
-	FFT_N fft_n();
-
+	//SETTING UP FFT
+	reg [31: 0] fftsum1,fftsum2,fftprod1,fftprod2;
+	wire [31:0] ffta1,ffta2,fftb1,fftb2,fftm1,fftm2,fftn1,fftn2;
+	wire fftinc;
+	reg [31:0] fftin;
+	reg fftstart;
+	wire fftvalid,fftready;
+	FFT_N uut (
+		.rst(rst), 
+		.clk(clk), 
+		.in(fftin), 
+		.inc(fftinc),
+		.start(fftstart),
+		.ready(fftready),
+		.valid(fftvalid),
+		.sum1(fftsum1), 
+		.sum2(fftsum2), 
+		.a1(ffta1), 
+		.b1(fftb1), 
+		.a2(ffta2), 
+		.b2(fftb2),
+		.m1(fftm1),
+		.m2(fftm2),
+		.n1(fftn1),
+		.n2(fftn2),
+		.prod1(fftprod1),
+		.prod2(fftprod2)
+	);
 	reg [1:0] mux;
 	parameter MNOTHING = 2'b00;
 	parameter MFILTER = 2'b01;
@@ -138,9 +164,10 @@ module FinalProject(
 	reg [4:0] state;
 	parameter BEGIN= 4'b0000;
 	parameter FILTER= 4'b0001;
-	parameter FFT= 4'b0010;
+	parameter FILTERWAIT= 4'b0010;
+	parameter FFT= 4'b0011;
 	parameter FFTWAIT= 4'b0100;
-	parameter FFTREAD= 4'b0101;
+	parameter ENDITER= 4'b0101;
 	parameter END = 4'b0011;
 	
 	//connect all wires. This is our mux...
@@ -172,9 +199,26 @@ module FinalProject(
 				fs2<=s2;
 				fp1<=p1;
 			end
+			MFFT: begin
+				a1<=ffta1;
+				a2<=ffta2;
+				b1<=fftb1;
+				b2<=fftb2;
+				m1<=fftm1;
+				n1<=fftn1;
+				m2<=fftm2;
+				n2<=fftn2;
+				fftsum1<=s1;
+				fftsum2<=s2;
+				fftprod1<=p1;
+				fftprod2<=p2;
+				fftin<=filt_out;
+			end
 		endcase
 	end
 	
+	
+	reg [2:0] iter;
 	always @(posedge clk)
 	begin
 		
@@ -187,6 +231,7 @@ module FinalProject(
 			filt_in<=0; //input
 			filt_start<=0; //dont start
 			amount<=0; //iterations
+			iter<=0; //1:5
 
 			state<=BEGIN;
 			mux<=MNOTHING;
@@ -203,9 +248,11 @@ module FinalProject(
 					if(filt_ready) begin
 						filt_start<=1; //start the filter
 						wea<=1; //set write to RAM
-						state<=FILTER;
+						state<=FILTERWAIT;
 					end
-					else if(filt_valid) begin
+				end
+				FILTERWAIT: begin
+					if(filt_valid) begin
 						state<=FFT;
 						mux<=MFFT;
 					end
@@ -224,20 +271,42 @@ module FinalProject(
 					end
 				end
 				FFT: begin
-					addr_filt<=0;
-					wea<=0;
-					state<=FFTWAIT;
+					if(fftready)
+					begin
+						fftstart<=1;
+						wea<=0;
+						state<=FFTWAIT;
+
+					end
 				end
 				FFTWAIT: begin
-					state<=FFTREAD;
+					if(fftvalid) begin
+						mux<=MNOTHING;
+						state<=ENDITER;
+						iter<=iter+1;
+					end
+					else
+					begin
+						fftstart<=0;
+						if(fftinc) begin
+							
+							addr_filt<=addr_filt+1;
+						end
+					end
 				end
-				FFTREAD: begin
-					$display("%h",filt_out);
-					addr_filt<=addr_filt+1;
-					state<=FFTWAIT;
+				ENDITER: begin
+					if(iter==5)begin
+						state<=END;
+					end
+					else
+					begin
+						amount<=WIN;
+						state<=FILTER; //set everything to filter
+						mux<=MFILTER;
+					end
 				end
 				END: begin
-					
+					$display("END");
 				end
 			endcase
 		end

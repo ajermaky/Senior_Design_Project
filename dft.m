@@ -14,11 +14,15 @@ while(stride<256)
            b = X(k+d+stride);
            X(k+d) = a + exp(-2*pi/256*(1i)*r*d)*b;
           X(k+d+stride) = a - exp(-2*pi/256*(1i)*r*d)*b;
-          num2hex(single(a));
-          num2hex(single(b));
+         
        end
        k=k+stride*2;
    end
     
    stride= stride*2;
 end
+
+rX = abs(real(X));
+iX = abs(imag(X));
+
+absX = max(rX,iX)+ min(rX,iX)/4;

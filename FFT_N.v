@@ -109,27 +109,38 @@ module FFT_N(
 	parameter FFT2WAIT = 5'b00111;
 	parameter FFTINNERLOOPEND = 5'b01000;
 	parameter FFTOUTERLOOPEND = 5'b01001;
-	parameter END= 5'b01010;
+	parameter PREPMAX = 5'b01010;
+	parameter MAX = 5'b01011;
+	parameter ADD = 5'b01100;
+	parameter OUTPUT = 5'b01101;
+	parameter END= 5'b01110;
 	
+	reg mux = 0;
+	parameter MFFT= 0;
 	
 	always @(*) begin
-		a1<=fa1;
-		a2<=fa2;
-		b1<=fb1;
-		b2<=fb2;
-		m1<=fm1;
-		m2<=fm2;
-		n1<=fn1;
-		n2<=fn2;
-		fprod1<=prod1;
-		fprod2<=prod2;
-		fsum1<=sum1;
-		fsum2<=sum2;
+		case(mux)
+			MFFT: begin
+				a1<=fa1;
+				a2<=fa2;
+				b1<=fb1;
+				b2<=fb2;
+				m1<=fm1;
+				m2<=fm2;
+				n1<=fn1;
+				n2<=fn2;
+				fprod1<=prod1;
+				fprod2<=prod2;
+				fsum1<=sum1;
+				fsum2<=sum2;
+			end
+		endcase
 	end
 	always @(posedge clk)
 	begin
 		counter<=counter+1;
 		if(rst) begin
+			mux<=0;
 			ready<=0;
 			valid<=0;
 			a1<=0;
@@ -162,9 +173,11 @@ module FFT_N(
 					ready<=1;
 					if(start) begin
 						state<=SEEDCACHE;
+						mux<=0;
 						counter<=2;
 						iter<=0;
 						reversal<=0;
+						ready<=0;
 					end
 				end
 				SEEDCACHE: begin
@@ -199,7 +212,11 @@ module FFT_N(
 				FFTOUTERLOOP: begin
 					if(stride==0)
 					begin
-						state<=END;
+						state<=PREPMAX;
+						mux<=1;
+						k<=0;
+						$display("window\n");
+
 					end
 					else
 					begin
@@ -269,6 +286,50 @@ module FFT_N(
 					stride<=stride<<1;
 					rdelta<=rdelta>>1;
 					state<=FFTOUTERLOOP;
+				end
+				
+				PREPMAX: begin
+					if(k==256)begin
+						state<=END;
+					end
+					a1<={0,realFFT[k][30:0]};
+					b1<={1,imagFFT[k][30:0]};
+					counter<=0;
+					state<=MAX;
+				end
+				
+				MAX: begin
+					if(counter==2)begin
+						n1<=32'h3e800000;
+						if(sum1[31]==1)begin //imag is larger.
+							m1<={0,a1[30:0]};
+							a1<={0,b1[30:0]};
+						end
+						else begin
+							m1<={0,b1[30:0]};
+							a1<={0,a1[30:0]};
+						end
+						state<=ADD;
+						counter<=0;
+					end
+				end
+				
+				ADD: begin
+					if(counter==2)
+					begin
+						b1<=prod1;
+						state<=OUTPUT;
+						counter<=0;
+					end
+				end
+				
+				OUTPUT: begin
+					if(counter==2)
+					begin
+						$display("%h",sum1);
+						state<=PREPMAX;
+						k<=k+1;
+					end
 				end
 				
 				END: begin
