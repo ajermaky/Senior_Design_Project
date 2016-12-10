@@ -45,7 +45,7 @@
 # PART OF THIS FILE AT ALL TIMES.
 
 
-set device xc3s500efg320-4
+set device xc3s100evq100-5
 set projName input_wave
 set design input_wave
 set projDir [file dirname [info script]]

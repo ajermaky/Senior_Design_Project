@@ -9,21 +9,7 @@ subplot(3,1,1);
 
 %% Input signal consisting of a 20 Hz, 50 Hz and 120 Hz sine wave
 x = 2*sin(2*pi*20*t) + 3*sin(2*pi*50*t) + 5*sin(2*pi*120*t); 
-coefile = fopen('input.coe','wt');
-coe = num2hex(single(y));
-fprintf(coefile,'memory_initialization_radix=16;\n');
-fprintf(coefile,'memory_initialization_vector=\n');
-for i=1:(length(y))
-        for j=1:8
-            fprintf(coefile,'%c',coe(i,j));
-        end
-        
-        if(i==length(y))
-            fprintf(coefile,';\n');
-        else
-            fprintf(coefile, ',\n');
-        end
-end
+
 %% Plot of input signal
 subplot(4,1,1);
 plot(Fs*t,x,'LineWidth',2);
@@ -39,6 +25,21 @@ xlabel('Time (ms)','FontSize',22,'FontWeight','Bold');
 ylabel('Magnitude','FontSize',22,'FontWeight','Bold');
 title('Input Signal with Added Noise','FontSize',32,'FontWeight','Bold');
 
+coefile = fopen('input.coe','wt');
+coe = num2hex(single(y));
+fprintf(coefile,'memory_initialization_radix=16;\n');
+fprintf(coefile,'memory_initialization_vector=\n');
+for i=1:(length(y))
+        for j=1:8
+            fprintf(coefile,'%c',coe(i,j));
+        end
+        
+        if(i==length(y))
+            fprintf(coefile,';\n');
+        else
+            fprintf(coefile, ',\n');
+        end
+end
 %% Bandpass filter the input signal using symmetric FIR with min zeros
 Fstop1 = 1;    % First Stopband Frequency
 Fpass1 = 35;    % First Passband Frequency

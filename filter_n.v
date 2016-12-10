@@ -79,9 +79,11 @@ module filter_n(
 				READY: begin
 					ready<=1;
 					state<=(start)?START:READY; //wait and then start
+					iter<=0;
 				end
 				START: begin
 					ready<=0;
+					valid<=0;
 					inc<=0;
 					if(iter==endAddr) begin
 						state<=END;

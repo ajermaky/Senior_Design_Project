@@ -115,12 +115,16 @@ module FFT_N(
 	parameter OUTPUT = 5'b01101;
 	parameter END= 5'b01110;
 	
-	reg mux = 0;
-	parameter MFFT= 0;
+	parameter MFFT =0;
+	parameter MEND = 1;
 	
-	always @(*) begin
+	reg mux;
+	reg [31:0] ta1,tb1,tm1,tn1;
+	always @(*)
+	begin
 		case(mux)
-			MFFT: begin
+			MFFT:
+			begin
 				a1<=fa1;
 				a2<=fa2;
 				b1<=fb1;
@@ -134,27 +138,31 @@ module FFT_N(
 				fsum1<=sum1;
 				fsum2<=sum2;
 			end
+			MEND:
+			begin
+				a1<=ta1;
+				b1<=tb1;
+				m1<=tm1;
+				n1<=tn1;
+			end
 		endcase
+			
 	end
+	
 	always @(posedge clk)
 	begin
 		counter<=counter+1;
 		if(rst) begin
-			mux<=0;
 			ready<=0;
 			valid<=0;
-			a1<=0;
-			a2<=0;
-			b1<=0;
-			b2<=0;
-			m1<=0;
-			m2<=0;
-			n1<=0;
-			n2<=0;
 			r1<=0;
 			r2<=0;
 			i1<=0;
 			i2<=0;
+			ta1<=0;
+			tb1<=0;
+			tm1<=0;
+			tn1<=0;
 			k<=0;
 			iter<=0;
 			reversal<=0;
@@ -173,22 +181,25 @@ module FFT_N(
 					ready<=1;
 					if(start) begin
 						state<=SEEDCACHE;
-						mux<=0;
 						counter<=2;
 						iter<=0;
 						reversal<=0;
 						ready<=0;
+						mux<=0;
+						valid<=0;
 					end
 				end
 				SEEDCACHE: begin
 					if(counter==2)
 					begin
 						realFFT[reversal]<= in;
+						imagFFT[reversal]<=0;
 						inc<=1;
 						iter<=iter+1;
 						if(iter==N)
 						begin
 							state<=FFT;
+							mux<=0;
 						end
 					end
 					else
@@ -246,6 +257,7 @@ module FFT_N(
 					else begin
 						if(fft_ready)
 						begin
+						
 							fft_start<=1;
 							r1<=realFFT[k+j];
 							i1<=imagFFT[k+j];
@@ -258,6 +270,7 @@ module FFT_N(
 				end
 				
 				FFT2WAIT: begin
+					
 					if(counter>2)
 					begin
 						if(fft_valid)
@@ -289,25 +302,28 @@ module FFT_N(
 				end
 				
 				PREPMAX: begin
-					if(k==256)begin
+					if(k==256) begin
 						state<=END;
 					end
-					a1<={0,realFFT[k][30:0]};
-					b1<={1,imagFFT[k][30:0]};
-					counter<=0;
-					state<=MAX;
+					else
+					begin
+						ta1<={0,realFFT[k][30:0]};
+						tb1<={1,imagFFT[k][30:0]};
+						counter<=0;
+						state<=MAX;
+					end
 				end
 				
 				MAX: begin
 					if(counter==2)begin
 						n1<=32'h3e800000;
 						if(sum1[31]==1)begin //imag is larger.
-							m1<={0,a1[30:0]};
-							a1<={0,b1[30:0]};
+							tm1<={0,a1[30:0]};
+							ta1<={0,b1[30:0]};
 						end
 						else begin
-							m1<={0,b1[30:0]};
-							a1<={0,a1[30:0]};
+							tm1<={0,b1[30:0]};
+							ta1<={0,a1[30:0]};
 						end
 						state<=ADD;
 						counter<=0;
@@ -317,7 +333,7 @@ module FFT_N(
 				ADD: begin
 					if(counter==2)
 					begin
-						b1<=prod1;
+						tb1<=prod1;
 						state<=OUTPUT;
 						counter<=0;
 					end

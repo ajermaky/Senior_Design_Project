@@ -1,7 +1,7 @@
 run
 -ifmt VHDL
 -ent input_wave_exdes
--p xc3s500e-fg320-4
+-p xc3s100e-vq100-5
 -ifn xst.prj
 -write_timing_constraints No
 -iobuf YES

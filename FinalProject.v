@@ -168,7 +168,7 @@ module FinalProject(
 	parameter FFT= 4'b0011;
 	parameter FFTWAIT= 4'b0100;
 	parameter ENDITER= 4'b0101;
-	parameter END = 4'b0011;
+	parameter END = 4'b0111;
 	
 	//connect all wires. This is our mux...
 	always @(*)
@@ -182,11 +182,18 @@ module FinalProject(
 				b2<=0;
 				m1<=0;
 				n1<=0;
+				m2<=0;
+				n2<=0;
 				
 				//filter
 				fs1<=0;
 				fs2<=0;
 				fp1<=0;
+				
+				fftsum1<=0;
+				fftsum2<=0;
+				fftprod1<=0;
+				fftprod2<=0;
 			end
 			MFILTER: begin
 				a1<=fa1;
@@ -217,11 +224,11 @@ module FinalProject(
 		endcase
 	end
 	
-	
+	reg [1:0] counter;
 	reg [2:0] iter;
 	always @(posedge clk)
 	begin
-		
+		counter<=counter+1;
 		if(rst) begin
 			addr_in<=0; //set up addr_in to beginning of input
 			addr_filt<=0; //adder_in start
@@ -232,7 +239,6 @@ module FinalProject(
 			filt_start<=0; //dont start
 			amount<=0; //iterations
 			iter<=0; //1:5
-
 			state<=BEGIN;
 			mux<=MNOTHING;
 		end
@@ -249,10 +255,11 @@ module FinalProject(
 						filt_start<=1; //start the filter
 						wea<=1; //set write to RAM
 						state<=FILTERWAIT;
+						counter<=0;
 					end
 				end
 				FILTERWAIT: begin
-					if(filt_valid) begin
+					if(counter==2 & filt_valid) begin
 						state<=FFT;
 						mux<=MFFT;
 					end
@@ -276,14 +283,14 @@ module FinalProject(
 						fftstart<=1;
 						wea<=0;
 						state<=FFTWAIT;
-
+						addr_filt<=addr_filt+1;
+						counter<=0;
 					end
 				end
 				FFTWAIT: begin
-					if(fftvalid) begin
+					if(counter==2&fftvalid) begin
 						mux<=MNOTHING;
 						state<=ENDITER;
-						iter<=iter+1;
 					end
 					else
 					begin
@@ -295,7 +302,7 @@ module FinalProject(
 					end
 				end
 				ENDITER: begin
-					if(iter==5)begin
+					if(iter==4)begin
 						state<=END;
 					end
 					else
@@ -303,6 +310,8 @@ module FinalProject(
 						amount<=WIN;
 						state<=FILTER; //set everything to filter
 						mux<=MFILTER;
+						addr_in<=1+addr_in;
+						iter<=iter+1;
 					end
 				end
 				END: begin

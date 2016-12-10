@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/ajermaky/Development/Homework/ECE111/Project/final_project_test_bench_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="final_project_test_bench" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="60" />
+   <wvobject fp_name="/final_project_test_bench/uut/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/in" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">in</obj_property>
+      <obj_property name="ObjectShortName">in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/result" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">result[31:0]</obj_property>
+      <obj_property name="ObjectShortName">result[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/ready" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ready</obj_property>
+      <obj_property name="ObjectShortName">ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/done" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/x" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">x[31:0]</obj_property>
+      <obj_property name="ObjectShortName">x[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/s1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">s1[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/s2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">s2[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/p1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">p1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">p1[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/p2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">p2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">p2[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/filt_ready" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">filt_ready</obj_property>
+      <obj_property name="ObjectShortName">filt_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/filt_valid" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">filt_valid</obj_property>
+      <obj_property name="ObjectShortName">filt_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/dfilt_in" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">dfilt_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dfilt_in[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/inc" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">inc</obj_property>
+      <obj_property name="ObjectShortName">inc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/fa1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">fa1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fa1[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/fa2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">fa2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fa2[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/fb1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">fb1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fb1[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/fb2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">fb2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fb2[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/fm1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">fm1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fm1[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/fn1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">fn1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fn1[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/ffta1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ffta1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ffta1[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/ffta2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ffta2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ffta2[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/fftb1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">fftb1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fftb1[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/fftb2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">fftb2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fftb2[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/fftm1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">fftm1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fftm1[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/fftm2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">fftm2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fftm2[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/fftn1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">fftn1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fftn1[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/fftn2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">fftn2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fftn2[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/fftinc" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">fftinc</obj_property>
+      <obj_property name="ObjectShortName">fftinc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/fftvalid" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">fftvalid</obj_property>
+      <obj_property name="ObjectShortName">fftvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/fftready" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">fftready</obj_property>
+      <obj_property name="ObjectShortName">fftready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/addr_in" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">addr_in[9:0]</obj_property>
+      <obj_property name="ObjectShortName">addr_in[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/wea" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">wea</obj_property>
+      <obj_property name="ObjectShortName">wea</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/addr_filt" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">addr_filt[7:0]</obj_property>
+      <obj_property name="ObjectShortName">addr_filt[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/filt_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">filt_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">filt_out[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/filt_in" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">filt_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">filt_in[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/a1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">a1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">a1[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/b1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">b1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">b1[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/a2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">a2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">a2[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/b2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">b2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">b2[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/m1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">m1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">m1[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/n1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">n1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">n1[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/m2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">m2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">m2[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/n2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">n2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">n2[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/amount" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">amount[9:0]</obj_property>
+      <obj_property name="ObjectShortName">amount[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/filt_start" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">filt_start</obj_property>
+      <obj_property name="ObjectShortName">filt_start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/uut/k" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">k[8:0]</obj_property>
+      <obj_property name="ObjectShortName">k[8:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/fp1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">fp1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fp1[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/fs1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">fs1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fs1[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/fs2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">fs2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fs2[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/fftsum1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">fftsum1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fftsum1[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/fftsum2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">fftsum2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fftsum2[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/fftprod1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">fftprod1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fftprod1[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/fftprod2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">fftprod2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fftprod2[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/fftin" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">fftin[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fftin[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/fftstart" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">fftstart</obj_property>
+      <obj_property name="ObjectShortName">fftstart</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/mux" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">mux[1:0]</obj_property>
+      <obj_property name="ObjectShortName">mux[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/state" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">state[4:0]</obj_property>
+      <obj_property name="ObjectShortName">state[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_test_bench/uut/iter" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">iter[2:0]</obj_property>
+      <obj_property name="ObjectShortName">iter[2:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>

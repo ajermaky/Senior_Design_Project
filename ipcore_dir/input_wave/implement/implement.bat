@@ -30,7 +30,7 @@ copy ..\example_design\input_wave_exdes.ucf results\
 cd results
 
 echo 'Running ngdbuild'
-ngdbuild -p xc3s500e-fg320-4 input_wave_exdes
+ngdbuild -p xc3s100e-vq100-5 input_wave_exdes
 
 echo 'Running map'
 map input_wave_exdes -o mapped.ncd  -pr i
