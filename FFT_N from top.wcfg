@@ -172,6 +172,8 @@
       <obj_property name="ElementShortName">state[4:0]</obj_property>
       <obj_property name="ObjectShortName">state[4:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ff00ff</obj_property>
    </wvobject>
    <wvobject fp_name="/final_project_test_bench/uut/uut/realFFT" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">realFFT[0:255,31:0]</obj_property>

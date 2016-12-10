@@ -2,10 +2,11 @@
 % X = zeros(1,256);
 % X(1:128) = a;
 % X(129:256) = a;
-X = filt_x(65:(256+64));
+X = filt_x(257:256+256);
 X=bitrevorder(X);
 
 stride = 1;
+
 while(stride<256)
    r= 128/stride;
    k=1;

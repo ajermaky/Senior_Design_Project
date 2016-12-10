@@ -125,25 +125,25 @@ module FFT_N(
 		case(mux)
 			MFFT:
 			begin
-				a1<=fa1;
-				a2<=fa2;
-				b1<=fb1;
-				b2<=fb2;
-				m1<=fm1;
-				m2<=fm2;
-				n1<=fn1;
-				n2<=fn2;
-				fprod1<=prod1;
-				fprod2<=prod2;
-				fsum1<=sum1;
-				fsum2<=sum2;
+				a1=fa1;
+				a2=fa2;
+				b1=fb1;
+				b2=fb2;
+				m1=fm1;
+				m2=fm2;
+				n1=fn1;
+				n2=fn2;
+				fprod1=prod1;
+				fprod2=prod2;
+				fsum1=sum1;
+				fsum2=sum2;
 			end
 			MEND:
 			begin
-				a1<=ta1;
-				b1<=tb1;
-				m1<=tm1;
-				n1<=tn1;
+				a1=ta1;
+				b1=tb1;
+				m1=tm1;
+				n1=tn1;
 			end
 		endcase
 			
@@ -316,7 +316,7 @@ module FFT_N(
 				
 				MAX: begin
 					if(counter==2)begin
-						n1<=32'h3e800000;
+						tn1<=32'h3e800000;
 						if(sum1[31]==1)begin //imag is larger.
 							tm1<={0,a1[30:0]};
 							ta1<={0,b1[30:0]};

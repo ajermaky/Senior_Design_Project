@@ -1,0 +1,16 @@
+185236 clock cycles
+
+filter sse:   2.0118e-11
+
+win1 sse:     8.8507e-09
+
+win2 sse:       8.4525e-09
+
+win3 sse:     1.2749e-08
+
+win4 sse:     8.0169e-09
+
+win5 sse:   1.0417e+04
+
+
+

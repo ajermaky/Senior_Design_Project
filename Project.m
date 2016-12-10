@@ -85,12 +85,37 @@ NFFT = 2^nextpow2(window_length);
 
 
 for i=1:5
-    pause(2);
     start = (i-1)*update+1;
     Y = fft(filt_x(start:start+window_length-1),NFFT);
     absY = max(abs(real(Y)),abs(imag(Y))) + min(abs(real(Y)),abs(imag(Y)))/4;
     f = Fs/2*linspace(0,1,NFFT/2+1);
     plot(f,absY(1:NFFT/2+1),'LineWidth',2);
+    xlabel('frequency');
+    ylabel('magnitude');
+    title(['Window', string(i)]);
+    pause(10);
+
+end
+
+%% wins
+
+window_length = 256;
+window_ratio = .25;
+
+NFFT = 2^nextpow2(window_length);
+
+
+for i=1:5
+    start = (i-1)*update+1;
+    Y = fft(filt_x(start:start+window_length-1),NFFT);
+    absY = max(abs(real(Y)),abs(imag(Y))) + min(abs(real(Y)),abs(imag(Y)))/4;
+    f = Fs/2*linspace(0,1,NFFT/2+1);
+    plot(f,absY(1:NFFT/2+1),'LineWidth',2);
+    xlabel('frequency');
+    ylabel('magnitude');
+    title(['Window', string(i)]);
+    pause(10);
+
 end
 
 

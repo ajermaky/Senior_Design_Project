@@ -22,11 +22,6 @@
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="Project.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
-    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="FinalProject_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="final_project_test_bench_beh.prj"/>
-    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="final_project_test_bench_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="final_project_test_bench_isim_beh.wdb"/>
-    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
     <file xil_pn:fileType="FILE_ASY" xil_pn:name="ipcore_dir/Adder.asy" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="ipcore_dir/Adder.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_VEO" xil_pn:name="ipcore_dir/Adder.veo" xil_pn:origination="imported"/>
@@ -48,92 +43,10 @@
     <file xil_pn:fileType="FILE_ASY" xil_pn:name="ipcore_dir/sintable.asy" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="ipcore_dir/sintable.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_VEO" xil_pn:name="ipcore_dir/sintable.veo" xil_pn:origination="imported"/>
-    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
-    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
-    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
-    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1481386170" xil_pn:in_ck="258599066106527979" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1481386170">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="FFT_2.v"/>
-      <outfile xil_pn:name="FFT_N.v"/>
-      <outfile xil_pn:name="Filter.v"/>
-      <outfile xil_pn:name="FinalProject.v"/>
-      <outfile xil_pn:name="fft_N_test.v"/>
-      <outfile xil_pn:name="fft_test.v"/>
-      <outfile xil_pn:name="filter_n.v"/>
-      <outfile xil_pn:name="filtertest.v"/>
-      <outfile xil_pn:name="final_project_test_bench.v"/>
-    </transform>
-    <transform xil_pn:end_ts="1481381668" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-4774872264366669963" xil_pn:start_ts="1481381668">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1481381668" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="1629962822345007863" xil_pn:start_ts="1481381668">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1481377221" xil_pn:in_ck="-6413918836794939644" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="4257791774953643827" xil_pn:start_ts="1481377221">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="ipcore_dir/Adder.ngc"/>
-      <outfile xil_pn:name="ipcore_dir/Adder.v"/>
-      <outfile xil_pn:name="ipcore_dir/Mult.ngc"/>
-      <outfile xil_pn:name="ipcore_dir/Mult.v"/>
-      <outfile xil_pn:name="ipcore_dir/coefficients.ngc"/>
-      <outfile xil_pn:name="ipcore_dir/coefficients.v"/>
-      <outfile xil_pn:name="ipcore_dir/costable.ngc"/>
-      <outfile xil_pn:name="ipcore_dir/costable.v"/>
-      <outfile xil_pn:name="ipcore_dir/filtered_input.ngc"/>
-      <outfile xil_pn:name="ipcore_dir/filtered_input.v"/>
-      <outfile xil_pn:name="ipcore_dir/input_wave.ngc"/>
-      <outfile xil_pn:name="ipcore_dir/input_wave.v"/>
-      <outfile xil_pn:name="ipcore_dir/sintable.ngc"/>
-      <outfile xil_pn:name="ipcore_dir/sintable.v"/>
-    </transform>
-    <transform xil_pn:end_ts="1481386170" xil_pn:in_ck="4914466529438689027" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1481386170">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="FFT_2.v"/>
-      <outfile xil_pn:name="FFT_N.v"/>
-      <outfile xil_pn:name="Filter.v"/>
-      <outfile xil_pn:name="FinalProject.v"/>
-      <outfile xil_pn:name="fft_N_test.v"/>
-      <outfile xil_pn:name="fft_test.v"/>
-      <outfile xil_pn:name="filter_n.v"/>
-      <outfile xil_pn:name="filtertest.v"/>
-      <outfile xil_pn:name="final_project_test_bench.v"/>
-      <outfile xil_pn:name="ipcore_dir/Adder.v"/>
-      <outfile xil_pn:name="ipcore_dir/Mult.v"/>
-      <outfile xil_pn:name="ipcore_dir/coefficients.v"/>
-      <outfile xil_pn:name="ipcore_dir/costable.v"/>
-      <outfile xil_pn:name="ipcore_dir/filtered_input.v"/>
-      <outfile xil_pn:name="ipcore_dir/input_wave.v"/>
-      <outfile xil_pn:name="ipcore_dir/sintable.v"/>
-    </transform>
-    <transform xil_pn:end_ts="1481386175" xil_pn:in_ck="4914466529438689027" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="349045973855322571" xil_pn:start_ts="1481386170">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="final_project_test_bench_beh.prj"/>
-      <outfile xil_pn:name="final_project_test_bench_isim_beh.exe"/>
-      <outfile xil_pn:name="fuse.log"/>
-      <outfile xil_pn:name="isim"/>
-      <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="xilinxsim.ini"/>
-    </transform>
-    <transform xil_pn:end_ts="1481386175" xil_pn:in_ck="7269103557784259901" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="1517721074547193998" xil_pn:start_ts="1481386175">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="final_project_test_bench_isim_beh.wdb"/>
-      <outfile xil_pn:name="isim.cmd"/>
-      <outfile xil_pn:name="isim.log"/>
-    </transform>
-    <transform xil_pn:end_ts="1481365781" xil_pn:in_ck="4522036946243003917" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1481365781">
+    <transform xil_pn:end_ts="1481395447" xil_pn:in_ck="4522036946243003917" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1481395447">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>

@@ -315,7 +315,7 @@ module FinalProject(
 					end
 				end
 				END: begin
-					$display("END");
+					//$display("END");
 				end
 			endcase
 		end
